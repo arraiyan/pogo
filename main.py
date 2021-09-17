@@ -80,6 +80,8 @@ def ban(update:Update,context:CallbackContext)->None:
     echo = update.message.text_html
     
     print(f'{echo[5:len(echo)]}...')
+    if not is_admin(update,context):
+        return
 
     l = list(map(int, re.findall(r'\d+', str(echo))))# extracts numbers
     if not len(l)<=0:
