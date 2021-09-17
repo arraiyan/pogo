@@ -96,8 +96,7 @@ def ban(update:Update,context:CallbackContext)->None:
                 print('pr')
                 context.bot.kick_chat_member(update.message.chat.id,user_id=int(j),revoke_messages=True)
                 return
-            else:
-                return
+            
 
 
 
