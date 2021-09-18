@@ -77,27 +77,26 @@ def start(update: Update, context: CallbackContext) -> None:
         context.bot.send_message(chat_id = update.message.chat.id,text='PLease login using /login')
         return          
 def ban(update:Update,context:CallbackContext)->None:
-    echo = update.message.text_html
-    
-    print(f'{echo[5:len(echo)]}...')
-    if not is_admin(update,context):
-        return
+    if is_admin(update,context):
+        echo = update.message.text_html
+        
+        print(f'{echo[5:len(echo)]}...')
 
-    l = list(map(int, re.findall(r'\d+', str(echo))))# extracts numbers
-    if not len(l)<=0:
-        print('ir')
-        context.bot.kick_chat_member(update.message.chat.id,user_id=int(l[0]),revoke_messages=True)
-    else:
-        print(env.user_trace)
-        print('er')
-        for i,j in env.user_trace.items():
-            print(i)
-            print(j)
-            print(f'{echo[5:len(echo)]}')
-            if str(i) == str(echo[5:len(echo)]):
-                print('pr')
-                context.bot.kick_chat_member(update.message.chat.id,user_id=int(j),revoke_messages=True)
-                return
+        l = list(map(int, re.findall(r'\d+', str(echo))))# extracts numbers
+        if not len(l)<=0:
+            print('ir')
+            context.bot.kick_chat_member(update.message.chat.id,user_id=int(l[0]),revoke_messages=True)
+        else:
+            print(env.user_trace)
+            print('er')
+            for i,j in env.user_trace.items():
+                print(i)
+                print(j)
+                print(f'{echo[5:len(echo)]}')
+                if str(i) == str(echo[5:len(echo)]):
+                    print('pr')
+                    context.bot.kick_chat_member(update.message.chat.id,user_id=int(j),revoke_messages=True)
+                    return
             
 
 
@@ -202,7 +201,10 @@ def site(update:Update,context:CallbackContext)->None:
 def airdrop(update:Update,context:CallbackContext)->None:
     update.message.reply_text('Airdropbot : https://t.me/PogoSwapbot',parse_mode='HTML')
     return
-
+def contract(update:Update,context:CallbackContext)->None:
+    update.message.reply_text('START : 09/09\n🆓️Airdrop : POGOSWAP\n‼️TOKEN : POGO\n SMART CONTRACT :0x553B3De469EA8A9940C5549D170f541409b05DD4\n🏦 Distribution Date : 18 October, 2021 \n🔖 AirDrop registration link : \nhttps://t.me/PogoSwapbot\n TASK\n1️⃣ Join ourTelegram group \n2️⃣ Follow Twitter and retweet pinned\n3️⃣ follow our youtube Channel\n4️⃣ Register your BinanceSmartChain BSC',parse_mode='HTML')
+    update.message.reply_text('\n(Bep_20)wallet address\n⚠️ Please note that all AirDrop tokens are free, please do not spend a single cent on AirDrop \n⚠️   YOU CAN ALSO BUY POGO ON POGOSWAP BEFORE OUR LAUNCH IN OCTOBER',parse_mode='HTML')
+    return
 
 
 
@@ -272,6 +274,7 @@ def main() -> None:
     dispatcher.add_handler(CommandHandler("contact", contact))
     dispatcher.add_handler(CommandHandler("site", site))
     dispatcher.add_handler(CommandHandler("price", price))
+    dispatcher.add_handler(CommandHandler("contract", contract))
     dispatcher.add_handler(CommandHandler("airdrop", airdrop))
 
 
