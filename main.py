@@ -213,7 +213,8 @@ def contract(update:Update,context:CallbackContext)->None:
 def echo(update: Update, context: CallbackContext) -> None:
     user_name = update.message.from_user.name
     user_id = update.message.from_user.id
-
+    if 'airdrop' in update.message.text:
+        airdrop(update,context)
     print(f'user_name{user_name},id{user_id}')
     if not user_name in env.user_name_trace:
         env.user_name_trace.append(user_name)
