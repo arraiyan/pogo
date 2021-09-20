@@ -215,6 +215,13 @@ def echo(update: Update, context: CallbackContext) -> None:
     user_id = update.message.from_user.id
     if 'airdrop' in str(update.message.text).lower():
         airdrop(update,context)
+    if 'contract' in str(update.message.text).lower():
+        contract(update,context)
+    if 'contact' in str(update.message.text).lower():
+        contract(update,context)
+    if 'website' in str(update.message.text).lower():
+        site(update,context) 
+        
     print(f'user_name{user_name},id{user_id}')
     if not user_name in env.user_name_trace:
         env.user_name_trace.append(user_name)
