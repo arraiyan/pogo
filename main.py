@@ -202,7 +202,7 @@ def airdrop(update:Update,context:CallbackContext)->None:
     update.message.reply_text('Airdropbot : http://t.me/PogoSwapAirdropBot',parse_mode='HTML')
     return
 def contract(update:Update,context:CallbackContext)->None:
-    update.message.reply_text('START : 09/09\n🆓️Airdrop : POGOSWAP\n‼️TOKEN : POGO\n SMART CONTRACT :0x553B3De469EA8A9940C5549D170f541409b05DD4\n🏦 Distribution Date : 18 October, 2021 \n🔖 AirDrop registration link : \nhttps://   http://t.me/PogoSwapAirdropBot \n TASK\n1️⃣ Join ourTelegram group \n2️⃣ Follow Twitter and retweet pinned\n3️⃣ follow our youtube Channel\n4️⃣ Register your BinanceSmartChain BSC',parse_mode='HTML')
+    update.message.reply_text('START : 09/09\n🆓️Airdrop : POGOSWAP\n‼️TOKEN : POGO\n SMART CONTRACT :0x553B3De469EA8A9940C5549D170f541409b05DD4\n🏦 Distribution Date : 18 October, 2021 \n🔖 AirDrop registration link : \nhttp://t.me/PogoSwapAirdropBot\n TASK\n1️⃣ Join ourTelegram group \n2️⃣ Follow Twitter and retweet pinned\n3️⃣ follow our youtube Channel\n4️⃣ Register your BinanceSmartChain BSC',parse_mode='HTML')
     update.message.reply_text('\n(Bep_20)wallet address\n⚠️ Please note that all AirDrop tokens are free, please do not spend a single cent on AirDrop \n⚠️   YOU CAN ALSO BUY POGO ON POGOSWAP BEFORE OUR LAUNCH IN OCTOBER',parse_mode='HTML')
     return
 
