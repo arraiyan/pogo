@@ -4,7 +4,7 @@ from telegram import InlineKeyboardButton   ,InlineKeyboardMarkup
 class env:
     user_trace = dict()#{'name':id}
     user_name_trace = list()
-    API_KEY = '1944399347:AAE06vUv8fUHl_tn0ie8yeIbsp5eMKhO_8A'
+    API_KEY = '2045274763:AAGlrTZkrv7bg8bC4-Pmr7LJb7elSRwdZx4'
 
     welcome_message = "Welcome to the group \.  \n💥The project is a DEX  IDO\. A DEX is a decentralized cryptocurrency exchange to allow trusted third party and frictionless trading\. The initial IDO DEX offering is a place for new blockchain startups\. We are currently launching the POGO token which will give the possibility to those who have it to be able to participate in the launch of new future projects such as purrporn\.com and ticketgo\.io which will launch this fall on PogoSwap IDO☄️ "
     price = f'value:1.29$ \nThe POGO token is ready for purchase now at: pogoswap.io/ido/0 🥳🥳 ONLY ON DESKTOP COMPUTER 🤓 Connect to MetaMask on the Binance Smart Chain to buy your POGO token '
