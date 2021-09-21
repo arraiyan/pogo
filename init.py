@@ -1,6 +1,6 @@
 def detect_link(text = str()):
     result = False
-    link_sings=['.com','.io','.health','.xyz','.net','.ru','.in','https://','http://','www.','.biz','.org','gmail','email','mail']
+    link_sings=['.me','.com','.io','.health','.xyz','.net','.ru','.in','https://','http://','www.','.biz','.org','gmail','email','mail']
     for i in link_sings :
         if i in text:
             result = True
